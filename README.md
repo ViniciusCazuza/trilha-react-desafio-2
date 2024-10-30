@@ -1,3 +1,86 @@
+
+# Projeto de Busca de Repositórios do GitHub
+
+Este projeto é uma aplicação em React que permite buscar repositórios no GitHub pelo nome do repositório completo, exibir as informações básicas de cada repositório encontrado e removê-los da lista. Utiliza a API pública do GitHub para buscar e exibir os dados.
+
+## Funcionalidades
+
+- **Busca de repositórios**: Pesquisa repositórios no GitHub pelo nome completo do repositório.
+- **Listagem de repositórios**: Exibe o nome, nome completo e um link para o repositório.
+- **Remoção de repositório**: Permite remover um repositório da lista exibida.
+
+## Tecnologias Utilizadas
+
+- **React**: Biblioteca JavaScript para construção da interface.
+- **Styled-components**: Biblioteca para estilização de componentes.
+- **Axios**: Cliente HTTP para requisições à API do GitHub.
+- **API GitHub**: Utilizada para buscar dados dos repositórios.
+
+## Estrutura do Projeto
+
+- `src/index.js`: Ponto de entrada da aplicação, onde o componente principal `App` é renderizado.
+- `src/styles.js`: Configuração global de estilos utilizando `styled-components`.
+- `src/pages/App.js`: Componente principal da aplicação, que controla o estado dos repositórios e as funções de busca e remoção.
+- `src/services/api.js`: Configuração do cliente `axios` para a API do GitHub.
+- `src/components/`: Contém os componentes reutilizáveis da aplicação:
+  - **Button**: Botão de busca de repositório.
+  - **Input**: Campo de entrada de texto para buscar o repositório.
+  - **ItemRepo**: Exibe as informações do repositório e possui a opção de remoção.
+
+## Como Executar o Projeto
+
+1. **Clone o repositório**:
+   ```bash
+   git clone <URL-do-repositório>
+   ```
+
+2. **Instale as dependências**:
+   ```bash
+   npm install
+   ```
+
+3. **Inicie o projeto**:
+   ```bash
+   npm start
+   ```
+
+   A aplicação estará disponível em [http://localhost:3000](http://localhost:3000).
+
+## Estrutura de Código
+
+### `src/pages/App.js`
+Este é o componente principal da aplicação que:
+- Controla o estado dos repositórios através de `useState`.
+- Contém a lógica para buscar e adicionar repositórios através da função `handleSearchRepo`.
+- Permite remover repositórios com `handleRemoveRepo`.
+
+### `src/services/api.js`
+Configura o cliente `axios` com a URL base da API do GitHub.
+
+### `src/components/ItemRepo`
+Exibe informações do repositório e contém o botão de remoção.
+
+## Exemplo de Uso
+
+1. Digite o nome completo do repositório no campo de busca (por exemplo, `facebook/react`).
+2. Clique em **Buscar** para ver o repositório na lista.
+3. Clique em **Remover** para excluir o repositório da lista.
+
+## Estilização
+
+A estilização é feita com `styled-components`, permitindo um escopo de estilos isolado por componente.
+
+## Créditos
+
+Este projeto foi construído para fins de aprendizado para o Bootcamp da DIO e XP Inc. e utiliza a [API pública do GitHub](https://api.github.com).
+
+---
+
+**Observação**: Certifique-se de não exceder os limites de requisição da API do GitHub para evitar bloqueios temporários.
+
+
+##
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
